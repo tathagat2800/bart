@@ -30,27 +30,27 @@
 			//var myexplode = function() { alert('BOOM! Better luck next time!'); }
 			
 			// user-defined function invoked after finishing the BART
-			var myend = function() {
-				var points = 0;
-				for(var i = 1; i <= 5; i++) { // run over all balloons
-					if(Number($('#expl' + i).attr('value')) == 0) {
-						points = points + Number($('#pump' + i).attr('value')) // get information saved to the hidden form element
-					}
-				}
-				//alert('You achieved ' + points + ' points.');
-			}
+			// var myend = function() {
+			// 	var points = 0;
+			// 	for(var i = 1; i <= 5; i++) { // run over all balloons
+			// 		if(Number($('#expl' + i).attr('value')) == 0) {
+			// 			points = points + Number($('#pump' + i).attr('value')) // get information saved to the hidden form element
+			// 		}
+			// 	}
+			// 	//alert('You achieved ' + points + ' points.');
+			// }
 		
 			// create a BART with 5 balloons
 			$("#bart").bart( { b: 5,                       // create 5 balloons
 					   o: { color: 'green',        // color of balloons
 						earnings: 1,           // points earned for each pump
 						popprob: 10,           // probability of popping; defined as 1 out of popprop
-						onexplode: myexplode   // user-defined function invoked after an explosion
+						// onexplode: myexplode   // user-defined function invoked after an explosion
 					      },
 					   s: { frmids_pumps: ['pump1', 'pump2', 'pump3', 'pump4', 'pump5'],    // IDs for hidden form elements used to save the number of pumps for a given balloon
 					        frmids_exploded: ['expl1', 'expl2', 'expl3', 'expl4', 'expl5'], // IDs for hidden form elements used to save whether a balloon exploded
-						onload: myload,         // user-defined function invoked after starting the BART
-						onend:  myend           // user-defined function invoked after finishing the BART
+						// onload: myload,         // user-defined function invoked after starting the BART
+						// onend:  myend           // user-defined function invoked after finishing the BART
 					      }
 					 } );
 		});
