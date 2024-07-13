@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informed Consent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        .consent-item {
+            margin-bottom: 20px;
+        }
+        #proceedBtn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #proceedBtn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>INFORMED CONSENT</h1>
+
+    <p><strong>Name of principal investigator/researcher</strong></p>
+
+    <p><strong>REC reference number- ETH2324-2112</strong></p>
+
+    <p><strong>Title of study --</strong> Impact of music on economic decision making.</p>
+
+    <p>PLEASE TICK</p>
+
+    <div class="consent-item">
+        <input type="checkbox" id="consent1" onchange="checkAllBoxes()">
+        <label for="consent1">I confirm that I have read and understood the participant information dated [25/06/2024.version-1] for the above study. I have had the opportunity to consider the information and ask questions which have been answered satisfactorily.</label>
+    </div>
+
+    <div class="consent-item">
+        <input type="checkbox" id="consent2" onchange="checkAllBoxes()">
+        <label for="consent2">I understand that my participation is voluntary and that I am free to withdraw without giving a reason without being penalised or disadvantaged.</label>
+    </div>
+
+    <div class="consent-item">
+        <input type="checkbox" id="consent3" onchange="checkAllBoxes()">
+        <label for="consent3">I understand that my participation is voluntary and no identifiable personal information of the participants will be collected at any point.</label>
+    </div>
+
+    <div class="consent-item">
+        <input type="checkbox" id="consent4" onchange="checkAllBoxes()">
+        <label for="consent4">I agree to City recording and processing this information about me. I understand that this information will be used only for the purpose(s) explained in the participant information and my consent is conditional on City complying with its duties and obligations under the General Data Protection Regulation (GDPR).</label>
+    </div>
+
+    <div class="consent-item">
+        <input type="checkbox" id="consent5" onchange="checkAllBoxes()">
+        <label for="consent5">I agree to take part in the above study.</label>
+    </div>
+
+    <button id="proceedBtn" disabled onclick="proceed()">Proceed</button>
+
+    <script>
+        function checkAllBoxes() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const proceedBtn = document.getElementById('proceedBtn');
+            proceedBtn.disabled = !Array.from(checkboxes).every(checkbox => checkbox.checked);
+        }
+
+        function proceed() {
+            const randomFile = `ex${Math.floor(Math.random() * 6) + 1}.html`;
+            window.location.href = randomFile;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        iframe {
+            width: 100%;
+            height: 90%;
+        }
+        input[type="submit"] {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 10px;
+            padding: 20px 50px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBfpAOPa7jhkXSZ0lBazOH0QqSWO00yOTRWEzjXL47t3AWUQ/viewform?embedded=true" width="640" height="1218" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <input id="submit" type="submit" value="Next">
+    <script>
+        function redirectToDebrief() {
+            window.location.href = "debrief.html";
+        }
+        document.querySelector("#submit").addEventListener("click", redirectToDebrief);
+    </script>
+    
+</body>
+</html>

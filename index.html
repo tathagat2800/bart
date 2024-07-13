@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .agreement {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PARTICIPANT INFORMATION</h1>
+
+    <h2>REC reference number, date and version of information sheet</h2>
+    <p>ETH2324-2112</p>
+    <p>25/06/2024.version-1</p>
+
+    <h2>Title of study</h2>
+    <p>This Impact of music on economic decision making.</p>
+
+    <h2>Name of principal investigator/researcher</h2>
+    <p>Tathagat Nitin Shanbhag</p>
+
+    <h2>Invitation paragraph</h2>
+    <p>We would like to invite you to take part in a research study. Before you decide whether you would like to take part it is important that you understand why the research is being done and what it would involve for you. Please take time to read the following information carefully and discuss it with others if you wish. Ask us if there is anything that is not clear or if you would like more information. You will be given a copy of this information sheet to keep.</p>
+
+    <!-- Add the rest of the content here -->
+
+    <h2>Further information and contact details</h2>
+    <p>Supervisor- Dr Sergiu Ungureanu.</p>
+    <p>Email address- Sergiu.Ungureanu.2@city.ac.uk</p>
+    <p>Student/researcher- Tathagat Nitin Shanbhag</p>
+    <p>Email address- tathagat.shanbhag@city.ac.uk</p>
+
+    <p>Thank you for taking the time to read this information sheet.</p>
+
+    <div class="agreement">
+        <h2>Agreement</h2>
+        <p>Do you agree to the conditions stated above? If so, please type "yes" in the field below:</p>
+        <input type="text" id="agreementInput" placeholder="Type 'yes' to agree">
+        <button onclick="checkAgreement()">Submit</button>
+    </div>
+
+    <script>
+        function checkAgreement() {
+            var input = document.getElementById("agreementInput").value.toLowerCase();
+            if (input === "yes") {
+                window.location.href = "consent.html";
+            } else {
+                alert("Please type 'yes' to agree and proceed.");
+            }
+        }
+    </script>
+</body>
+</html>
