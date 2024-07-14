@@ -6,8 +6,15 @@
     
     $.fn.bart = function( method ) {
 
-        //generate a random number on page load
-        const randomNumber = Math.floor(Math.random() * 3) + 1;
+	// play background music if the random number is even and different if odd
+	const randomNumber = Math.floor(Math.random() * 3) + 1;
+            if (randomNumber == 1) {
+                var audio = new Audio("sounds/back-audio-1.wav");
+                audio.play();
+            } else {
+                var audio = new Audio("sounds/back-audio-2.wav");
+                audio.play();
+            }
 
         // default options
         var opts = {
