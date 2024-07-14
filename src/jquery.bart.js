@@ -256,13 +256,13 @@
             // }
 
             //play background music if the random number is even and different if odd
-            if (randomNumber == 1) {
-                var audio = new Audio(opts.sndpath + 'back-audio-1.wav');
-                audio.play();
-            } else if (randomNumber == 2) {
-                var audio = new Audio(opts.sndpath + 'back-audio-2.wav');
-                audio.play();
-            }
+            // if (randomNumber == 1) {
+            //     var audio = new Audio(opts.sndpath + 'back-audio-1.wav');
+            //     audio.play();
+            // } else if (randomNumber == 2) {
+            //     var audio = new Audio(opts.sndpath + 'back-audio-2.wav');
+            //     audio.play();
+            // }
             
             // on inflate hook
             this.oninflate();
