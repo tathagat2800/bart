@@ -33,10 +33,23 @@
             background-color: #cccccc;
             cursor: not-allowed;
         }
+        .logo {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .title-container {
+            flex-grow: 1;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+    <div class="logo-container">
+    <img src="image.png" alt="City University of London Logo" class="logo">
+    <div class="title-container">
     <h1>INFORMED CONSENT</h1>
+    </div>
+    </div>
 
     <p><strong>Name of principal investigator/researcher</strong></p>
 
@@ -86,8 +99,7 @@
         }
 
         function proceed() {
-            const randomFile = `ex${Math.floor(Math.random() * 6) + 1}.html`;
-            window.location.href = randomFile;
+            window.location.href = "instruction.html";
         }
     </script>
 </body>

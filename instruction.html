@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BART Instructions</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #444;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .proceed-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .proceed-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <h1>Balloon Analogue Risk Task (BART) Instructions</h1>
+        
+        <p>Welcome to the Balloon Analogue Risk Task. In this task, you will see a virtual balloon on the screen. Your goal is to earn as much money as possible by inflating the balloon. Here's how it works:</p>
+        
+        <h2>1. Pump the Balloon:</h2>
+        <ul>
+            <li>Click the "Pump" button to inflate the balloon. Each pump earns you a certain sum in a temporary bank.</li>
+            <li>The more you pump, the bigger the balloon gets, and the more money you can earn.</li>
+        </ul>
+        <img src="Picture1.png" alt="Pump the Balloon">
+        
+        <h2>2. Cashing Out:</h2>
+        <ul>
+            <li>At any time, you can click the "Collect Money" button to stop pumping and secure the money you've earned for that balloon into a permanent bank.</li>
+            <li>Money in the permanent bank is safe and cannot be lost.</li>
+        </ul>
+        <img src="Picture2.png" alt="Cashing Out">
+        
+        <h2>3. Balloon Bursts:</h2>
+        <ul>
+            <li>The balloon can burst at any time. If the balloon bursts, you lose all the money in the temporary bank for that balloon.</li>
+            <li>Each pump increases the risk of the balloon bursting.</li>
+        </ul>
+        
+        <h2>4. Trials: 10</h2>
+        <ul>
+            <li>You will complete 10 trials, each with a new balloon. Your total earnings will be the sum of the money secured in the permanent bank from all trials.</li>
+        </ul>
+        
+        <p>Remember, the goal is to balance the risk of the balloon bursting with the potential rewards from pumping. Good luck, and try to earn as much as you can!</p>
+        
+        <button class="proceed-btn" onclick="proceedToGame()">Proceed to Game</button>
+    </div>
+
+    <script>
+        function proceedToGame() {
+            const randomFile = `ex${Math.floor(Math.random() * 6) + 1}.html`;
+            window.location.href = randomFile;
+            alert("Proceeding to game...");
+            // You can replace this with actual game start logic
+        }
+    </script>
+</body>
+</html>
