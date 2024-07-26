@@ -3,6 +3,8 @@
 
 (function($) {
     
+    let playedMusic = ""; // HIGH or LOW
+    let clickCount = 0;
     
     $.fn.bart = function( method ) {
 
@@ -11,9 +13,13 @@
             if (randomNumber == 1) {
                 var audio = new Audio("sounds/back-audio-1.wav");
                 audio.play();
+                playedMusic = "LOW";
+                localStorage.setItem("playedMusic", playedMusic);
             } else {
                 var audio = new Audio("sounds/back-audio-2.wav");
                 audio.play();
+                playedMusic = "HIGH";
+                localStorage.setItem("playedMusic", playedMusic);
             }
 
         // default options
@@ -173,6 +179,10 @@
          * @source              adapted from http://www.loganfranken.com/blog/64/html5-canvas-balloon/
          */
         balloon.prototype.inflate = function(canvas) {
+
+            clickCount++;
+            localStorage.setItem("clickCount", clickCount);
+            console.log(clickCount);
             
             // center of canvas
             var centerX = (canvas.width() - 200) / 2;
