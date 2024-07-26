@@ -31,9 +31,13 @@
     </style>
 </head>
 <body>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBfpAOPa7jhkXSZ0lBazOH0QqSWO00yOTRWEzjXL47t3AWUQ/viewform?embedded=true" width="640" height="1218" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <iframe width="640" height="1218" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     <input id="submit" type="submit" value="Next">
     <script>
+        //set src link to iframe
+        const playedMusic = localStorage.getItem("playedMusic");
+        const clickCount = localStorage.getItem("clickCount");
+        document.querySelector("iframe").src = `https://docs.google.com/forms/d/e/1FAIpQLSfBfpAOPa7jhkXSZ0lBazOH0QqSWO00yOTRWEzjXL47t3AWUQ/viewform?usp=pp_url&entry.647408096=${playedMusic}&entry.567920930=${clickCount}`;
         function redirectToDebrief() {
             window.location.href = "debrief.html";
         }
